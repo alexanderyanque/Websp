@@ -1,0 +1,114 @@
+<html lang="es">
+	<head>
+		
+		<title> Pag SP</title>
+		<meta charset="utf-8"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		
+<h1 class="titulo"><ins> Perfil del Alumno Sanpablino </ins></h1>		
+<style>
+	h1.titulo{
+		color:MediumSeaGreen;
+	
+		text-align:center;		
+		background-color:LightSteelBlue;
+	}
+	p.texto{
+		padding:4px;
+		background-color:LemonChiffon;
+	}
+	ul.lista{
+		padding:3px;
+		background-color:LightBlue;
+		list-style-type:circle;
+		color:Gray;
+	}
+	li.listas{
+		padding:3px;
+		background-color:Grey;
+		color:White;
+	}
+	</style>
+	</head>
+	
+	<body style="margin:100px;background-color:LightGreen">
+	
+	<p id="pt"class="texto">Esta es la estructura de un posible perfil de presentacion de un alumno perteneciente a la Universidad Catolica San Pablo.</p>
+	<ul class="lista" id="lista">
+		<li class="listas"><ins>Nombre :</ins>  Juanito             <button id="dos">Eliminar</button></li>
+		<li class="listas"><ins>Apellido :</ins>  Perez <button id="uno">Eliminar</button></li>
+		<li class="listas"><ins>Carrera :</ins>  Ciencia de la Computacion <button id="tres">Eliminar</button></li>
+		<li class="listas"><ins>Hobby :</ins>  Estudiar <button id="cuatro">Eliminar</button></li>
+		<li class="listas"><ins>Fecha de Nacimiento :</ins>  01-01-01<button id="cinco">Eliminar</button> </li>
+		<li class="listas"><ins>Direccion :</ins>  Urb. ABC-00<button id="seis">Eliminar</button> </li>
+	</ul>
+	<p class ="texto"> Gustos: </p>
+	<table  style="border:2px solid black; padding:5px;width:30%">
+	<tr>
+		<td><ins>Futbol:</ins></td>
+		<td>Si</td>	
+	</tr>
+	<tr>
+		<td><ins>Cine:</ins></td>	
+		<td>No</td>
+	</tr>
+	<tr>
+		<td><ins>Leer:</ins></td>	
+		<td>Si</td>
+	</tr>
+	<tr>
+		<td><ins>Correr:</ins></td>	
+		<td>No</td>
+	</tr>		
+	</table>
+
+
+	<script type = "text/javascript">
+		$(document).ready(function(){
+			$("p").mouseover(function(){
+				$(this).hide(200).show(200);
+				$(this).css("background-color","LightBlue");
+			});
+		});
+		$(document).ready(function(){
+			$("p").mouseout(function(){
+				$(this).hide().show();
+				$(this).css("background-color","LemmonChiffon");
+			});
+		});
+		$(document).ready(function(){
+			$("#uno").click(function(){			
+				$("#lista").children().slice(1,2).hide();
+			});
+		});
+		$(document).ready(function(){
+			$("#dos").click(function(){			
+				$("#lista").children().slice(0,1).hide();
+			});
+		});
+		$(document).ready(function(){
+			$("#tres").click(function(){			
+				$("#lista").children().slice(2,3).hide();
+			});
+		});
+		$(document).ready(function(){
+			$("#cuatro").click(function(){			
+				$("#lista").children().slice(3,4).hide();
+			});
+		});
+		$(document).ready(function(){
+			$("#cinco").click(function(){			
+				$("#lista").children().slice(4,5).hide();
+			});
+		});
+		$(document).ready(function(){
+			$("#seis").click(function(){			
+				$("#lista").children().slice(5,6).hide();
+			});
+		});		
+	</script>
+
+	
+
+	</body>
+</html>
